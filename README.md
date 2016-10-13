@@ -74,10 +74,62 @@ defaultConfig定义的是默认的属性，productFlavors的是每一个单独�
 
 ![](https://github.com/wzgiceman/ProductFavorl/blob/master/gif/a1345078-1dd5-4876-8cc8-d64fc250bc1f.png)
 
-可以明显的看出demo是工程build模式，但是fulls没有build；这个需要开发者自己去切换
+分别创建对应的xml-layout，区分不同：
 
+**demo-layout**
+
+```java
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/activity_secend"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    >
+
+
+    <TextView android:layout_width="wrap_content"
+              android:textColor="@color/colorAccent"
+              android:text="@string/text"
+              android:layout_height="wrap_content"/>
+
+</RelativeLayout>
+
+```
+**fulls-layout**
+
+```java
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/activity_secend"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    >
+
+
+    <TextView android:layout_width="wrap_content"
+              android:text="@string/text"
+              android:textColor="@color/colorPrimary"
+              android:textSize="33sp"
+              android:layout_height="wrap_content"/>
+
+</RelativeLayout>
+```
 
 **通过build variant选择当前要构建的工程**
+
+可以明显的看出demo是工程build模式，但是fulls没有build；这个需要开发者自己去切换
 
 ![](https://github.com/wzgiceman/ProductFavorl/blob/master/gif/9dbdb097-6a93-43da-b686-23b2b36b1731.png)
 
