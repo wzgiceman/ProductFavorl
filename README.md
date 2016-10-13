@@ -54,32 +54,32 @@ defaultConfig定义的是默认的属性，productFlavors的是每一个单独�
     }
 ```
 
+
 这样AS默认就会构建两个项目，其中一个是fulls，一个是demo，他们公用一个项目main（com.wzgiceman.productfavorl）；但是可惜的是AS并不会自动
 生成这两个的工程文件，需要手动创建如下：
 
-
-
-
-
-* 传统对比
-```java
-android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.2"
-    defaultConfig {
-        applicationId "com.wzgiceman.productfavorl"
-        minSdkVersion 17
-        targetSdkVersion 23
-        versionCode 1
-        versionName "1.0"
-    }
-```
-
-##实现效果
+##效果
 1. demo渠道-包名：com.wzgiceman.productfavorl.demo
 ![](https://github.com/wzgiceman/ProductFavorl/blob/master/gif/demo.gif)
 2. full渠道-包名：com.wzgiceman.productfavorl.fulls
 ![](https://github.com/wzgiceman/ProductFavorl/blob/master/gif/full.gif)
 
 ##实现方法
+
+**我们分别在demo和fulls中创建一个SecendActivity**
+**构建完成后的工程目录**
+![](https://github.com/wzgiceman/ProductFavorl/blob/master/gif/a1345078-1dd5-4876-8cc8-d64fc250bc1f.png)
+可以明显的看出demo是工程build模式，但是fulls没有build；这个需要开发者自己去切换
+
+
+**通过build variant选择当前要构建的工程**
+![](https://github.com/wzgiceman/ProductFavorl/blob/master/gif/9dbdb097-6a93-43da-b686-23b2b36b1731.png)
+
+**配置 AndroidManifest**
+```java
+  <activity android:name=".SecendActivity"> </activity>
+```
+
+
+
 
