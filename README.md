@@ -3,6 +3,8 @@
 
 ##运行场景
 同一款软件，因为定制和其他原因，需要打包多个版本，每个版本都有各自的特色和区别（整体显示大致一样），而且能同时安装到一个手机（具有不同的包名）
+；技术点不是很难，但是确实很实用，作者就遇到过这样的需求，想当初eclipse开发的时候，定制了10多版本，svn都乱套了，同事接手瞬间懵逼，一旦修改需求
+.....都是泪！
 
 ##运行技术
 AndroidStudio 打包中的productFlavors
@@ -133,7 +135,8 @@ defaultConfig定义的是默认的属性，productFlavors的是每一个单独�
 
 ![](https://github.com/wzgiceman/ProductFavorl/blob/master/gif/9dbdb097-6a93-43da-b686-23b2b36b1731.png)
 
-**注意： 当你修改了项目中的构建文件， Android Studio 需要一个项目同步来导入构建配置的改变。点击出现在 Android Studio 黄色通知栏上的 Sync Now 按钮来导入这些变化**
+注意： 当你修改了项目中的构建文件， Android Studio 需要一个项目同步来导入构建配置的改变。
+点击出现在 Android Studio 黄色通知栏上的 Sync Now 按钮来导入这些变化
 
 **配置 AndroidManifest**
 
@@ -144,8 +147,22 @@ defaultConfig定义的是默认的属性，productFlavors的是每一个单独�
 
 测试模式下需要选择对应的debug模式运行
 
+##打包
 
+**注意：虽然只有 release 的构建类型出现在默认的 build.gradle 文件中，但每个构建都提供了 release 和 debug 的构建类型。**
 
+在这个实例中，产品口味和构建类型创建了下面的构建变种：
+
+* demoDebug
+* demoRelease
+* fullsDebug
+* fullsRelease
+
+比较简单大家自己打包的时候自己配置吧
+
+![](https://github.com/wzgiceman/ProductFavorl/blob/master/gif/085a650c-418c-4353-a729-7679087da9aa.png)
+
+打完收工！
 
 
 
