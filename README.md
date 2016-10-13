@@ -133,6 +133,8 @@ defaultConfig定义的是默认的属性，productFlavors的是每一个单独�
 
 ![](https://github.com/wzgiceman/ProductFavorl/blob/master/gif/9dbdb097-6a93-43da-b686-23b2b36b1731.png)
 
+**注意： 当你修改了项目中的构建文件， Android Studio 需要一个项目同步来导入构建配置的改变。点击出现在 Android Studio 黄色通知栏上的 Sync Now 按钮来导入这些变化**
+
 **配置 AndroidManifest**
 
 ```java
@@ -142,7 +144,6 @@ defaultConfig定义的是默认的属性，productFlavors的是每一个单独�
 
 测试模式下需要选择对应的debug模式运行
 
-**注意： 当你修改了项目中的构建文件， Android Studio 需要一个项目同步来导入构建配置的改变。点击出现在 Android Studio 黄色通知栏上的 Sync Now 按钮来导入这些变化**
 
 
 
